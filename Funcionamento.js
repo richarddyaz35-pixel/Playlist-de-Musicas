@@ -3,16 +3,7 @@
 // Estrutura de armazenamento: Array
 // ==========================================
 
-let playlist = [
-    {
-        titulo: "Sol",
-        artista: "Blxck",
-        album: "Blxck official",
-        genero: "Pop",
-        ano: 2026
-    },
-];
-
+let playlist = [];
 
 // ==========================================
 // CREATE
