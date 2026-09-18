@@ -1,0 +1,364 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2B181A;
+    color: #F4E9EA;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.cabecalho {
+    background-color: #30191D;
+    border-bottom: 1px solid #4F272D;
+    text-align: center;
+    padding: 35px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.cabecalho h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #F4E9EA;
+}
+
+.cabecalho p {
+    color: #BFA9AD;
+    font-size: 16px;
+}
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+========================================== */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+/* ==========================================
+   CARDS PRINCIPAIS
+========================================== */
+
+.card {
+    background-color: #351D21;
+    border: 1px solid #4F272D;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+}
+
+.card h2 {
+    color: #E8C8CD;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+#form-musica {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: #C9AEB3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo input,
+.busca input {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #633139;
+    border-radius: 8px;
+
+    background-color: #281719;
+    color: #F4E9EA;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.busca input:focus {
+    border-color: #D94158;
+    box-shadow: 0 0 0 2px rgba(217, 65, 88, 0.15);
+}
+
+.campo input::placeholder,
+.busca input::placeholder {
+    color: #806A6E;
+}
+/* ==========================================
+   MODO DE EDIÇÃO
+========================================== */
+
+.card.modo-edicao {
+    border-color: #8F3948;
+    background-color: #3A2025;
+    box-shadow:
+        0 0 0 1px rgba(184, 61, 79, 0.25),
+        0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.card.modo-edicao h2 {
+    color: #F0A9B3;
+}
+
+/* Botão Salvar Alterações durante a edição */
+
+.card.modo-edicao .btn-principal {
+    background-color: #8F3948;
+}
+
+.card.modo-edicao .btn-principal:hover {
+    background-color: #B83D4F;
+}
+
+/* Botão Cancelar */
+
+#btn-cancelar-edicao {
+    grid-column: 1 / -1;
+    margin-top: -8px;
+    padding: 12px;
+
+    background-color: #472128;
+    color: #DDBEC3;
+
+    border: 1px solid #713440;
+}
+
+#btn-cancelar-edicao:hover {
+    background-color: #612B35;
+    border-color: #8F3948;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.btn-principal {
+    background-color: #B83D4F;
+    color: #FFF1F3;
+}
+
+.btn-principal:hover {
+    background-color: #D9475C;
+    transform: translateY(-1px);
+}
+
+/* BOTÃO SECUNDÁRIO */
+
+.btn-secundario {
+    background-color: #472128;
+    color: #E8D3D6;
+    border: 1px solid #673039;
+}
+
+.btn-secundario:hover {
+    background-color: #5A2932;
+}
+
+/* ==========================================
+   BOTÃO DO FORMULÁRIO
+========================================== */
+
+#form-musica .btn-principal {
+    grid-column: 1 / -1;
+    margin-top: 5px;
+    padding: 13px;
+}
+
+/* ==========================================
+   BUSCA
+========================================== */
+
+.busca {
+    display: flex;
+    gap: 10px;
+}
+
+.busca input {
+    flex: 1;
+}
+
+/* ==========================================
+   TÍTULO DA LISTA
+========================================== */
+
+.titulo-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.titulo-lista h2 {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   CARD DE CADA MÚSICA
+========================================== */
+
+.musica {
+    background-color: #2F1A1E;
+
+    border: 1px solid #4C272D;
+    border-left: 4px solid #B83D4F;
+
+    border-radius: 10px;
+
+    padding: 18px;
+    margin-bottom: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    transition: 0.2s;
+}
+
+.musica:hover {
+    border-left-color: #E64B61;
+    background-color: #381E23;
+}
+
+.informacoes-musica {
+    flex: 1;
+}
+
+.informacoes-musica h3 {
+    color: #F0D8DC;
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+.informacoes-musica p {
+    color: #BDA8AC;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/* ==========================================
+   BOTÕES DE AÇÃO
+========================================== */
+
+.acoes {
+    display: flex;
+    gap: 8px;
+}
+
+/* EDITAR */
+
+.btn-editar {
+    background-color: #63313A;
+    color: #F1DEE1;
+}
+
+.btn-editar:hover {
+    background-color: #7A3945;
+}
+
+/* EXCLUIR */
+
+.btn-excluir {
+    background-color: #672A35;
+    color: #F5DDE1;
+}
+
+.btn-excluir:hover {
+    background-color: #853544;
+}
+
+/* ==========================================
+   MENSAGEM
+========================================== */
+
+.mensagem {
+    text-align: center;
+    color: #A99095;
+    padding: 25px;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 650px) {
+
+    .cabecalho h1 {
+        font-size: 28px;
+    }
+
+    #form-musica {
+        grid-template-columns: 1fr;
+    }
+
+    .busca {
+        flex-direction: column;
+    }
+
+    .musica {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acoes {
+        width: 100%;
+    }
+
+    .acoes button {
+        flex: 1;
+    }
+
+    .titulo-lista {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

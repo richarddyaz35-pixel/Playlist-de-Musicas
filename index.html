@@ -1,0 +1,205 @@
+<<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Playlist</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <h1>🎵 Minha Playlist</h1>
+
+        <p>
+            Gerencie sua Playlit de Musicas
+        </p>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- =========================================
+             FORMULÁRIO DE CADASTRO
+        ========================================== -->
+
+        <section class="card">
+
+            <h2>🎶 Adicionar Música</h2>
+
+            <form id="form-musica">
+
+                <div class="campo">
+
+                    <label for="titulo">
+                        Título
+                    </label>
+
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Nome da música"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="artista">
+                        Artista
+                    </label>
+
+                    <input
+                        type="text"
+                        id="artista"
+                        placeholder="Nome do artista"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="album">
+                        Álbum
+                    </label>
+
+                    <input
+                        type="text"
+                        id="album"
+                        placeholder="Nome do álbum"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="genero">
+                        Gênero
+                    </label>
+
+                    <input
+                        type="text"
+                        id="genero"
+                        placeholder="Ex: Rock, Pop, Rap..."
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="ano">
+                        Ano
+                    </label>
+
+                    <input
+                        type="number"
+                        id="ano"
+                        placeholder="Ano de lançamento"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit" class="btn-principal">
+                    + Adicionar Música
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =========================================
+             BUSCA POR ARTISTA
+        ========================================== -->
+
+        <section class="card">
+
+            <h2>🔎 Pesquisar Artista</h2>
+
+            <div class="busca">
+
+                <input
+                    type="text"
+                    id="campo-busca"
+                    placeholder="Digite o nome do artista"
+                >
+
+                <button
+                    type="button"
+                    id="btn-buscar"
+                    class="btn-principal"
+                >
+                    Buscar
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             LISTA DE MÚSICAS
+        ========================================== -->
+
+        <section class="card">
+
+            <div class="titulo-lista">
+
+                <h2>🎵 Músicas</h2>
+
+                <button
+                    type="button"
+                    id="btn-listar"
+                    class="btn-secundario"
+                >
+                    Mostrar todas
+                </button>
+
+            </div>
+
+
+            <div id="lista-musicas">
+
+                <!--
+                    As músicas serão inseridas
+                    automaticamente pelo JavaScript.
+                -->
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         SCRIPTS
+    ========================================== -->
+
+    <script src="Funcionamento.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
